@@ -2,5 +2,6 @@ language: java
 jdk:
   - openjdk10
 script:
+  - bundle install
   - bundle exec danger
   - ./gradlew build
