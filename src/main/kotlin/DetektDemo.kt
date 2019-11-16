@@ -1,51 +1,47 @@
+
+
 class DetektDemo {
-    private   val unusedVariable :   String = "unused"
 
-    fun isHTTPSuccess(statusCode: Int): Boolean = statusCode == 200
+    companion object {
+        private const val SUCCESS = 200
+    }
 
-    fun veryLongFunction(){
+    fun isHTTPSuccess(statusCode: Int): Boolean = statusCode == SUCCESS
+
+    fun veryLongFunction() {
         println("Hello")
         println("Hello")
         println("Hello")
-        println("Hello");
-        println("Hello")
-        println("Hello")
-        println("Hello")
-        println("Hello");
         println("Hello")
         println("Hello")
     }
 
-    fun fixMyStyle(x:Int)   : Int {
-        when(x){
-            1 ->{
+    fun fixMyStyle(x: Int): Int {
+        when (x) {
+            1 -> {
                 println(x)
                 return x
             }
-            2 ->{
+            2 -> {
                 println(x)
                 return x
             }
-            else -> {throw Exception()}
+            else -> { throw TestException("problem") }
         }
     }
 
     fun notCompletedFunction() {
-        // TODO: fix this function
-        println("not completed")
+        println("completed")
     }
 
-    // This is a tmp hack solution
-    fun hackyFunction(){
-        println("hack solution")
-    }
-
-    fun unsafeFunction(){
+    fun unsafeFunction() {
         var user: User? = null
-        println(user!!.name)
+        println(user?.name)
     }
 }
 
 class User {
     val name = "User"
 }
+
+class TestException(message: String) : Exception(message)
