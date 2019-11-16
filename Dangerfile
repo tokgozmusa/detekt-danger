@@ -1,4 +1,4 @@
-kotlin_files = (git.added_files + git.modified_files).select{ |file| file.end_with? (".kt", ".kts") }
+kotlin_files = (git.added_files + git.modified_files).select{ |file| file.end_with?(".kt", ".kts") }
 
 unless kotlin_files.empty?
   comma_separated_kotlin_files = kotlin_files.join(",")
