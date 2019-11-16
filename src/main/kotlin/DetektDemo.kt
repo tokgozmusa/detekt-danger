@@ -1,1 +1,2 @@
-class DetektDemo {}
+class DetektDemo {
+}
