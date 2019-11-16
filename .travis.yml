@@ -4,4 +4,3 @@ jdk:
 script:
   - bundle install
   - bundle exec danger
-  - ./gradlew build
